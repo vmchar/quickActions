@@ -194,7 +194,7 @@ extern "C"
     
     void setItem( const char* itemType, const char* localizedTitle, const char* localizedSubtitle, const char* customIconName, const char* builtinIconName)
     {
-        [QuickActionsManager.instance setItem:itemType title:localizedSubtitle subtitle:localizedSubtitle customName:customIconName iconName:builtinIconName];
+        [QuickActionsManager.instance setItem:itemType title:localizedTitle subtitle:localizedSubtitle customName:customIconName iconName:builtinIconName];
     }
     
 }
