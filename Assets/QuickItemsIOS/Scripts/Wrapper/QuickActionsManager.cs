@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using UnityEngine;
 
 namespace QuickActionsiOS
 {
@@ -119,6 +120,16 @@ namespace QuickActionsiOS
             return removeItemAtIndex(i);
             #endif
             return false;
+        }
+
+        /// <summary>
+        ///  Remove all available to user Quick Actions.
+        /// </summary>
+        public static void RemoveAllItems()
+        {
+            var currentNubmerOfShortcuts = GetNumberOfShortcuts();
+            for (var i = 0; i < currentNubmerOfShortcuts; i++)
+                RemoveItemAtIndex(0);
         }
 
         /// <summary>
