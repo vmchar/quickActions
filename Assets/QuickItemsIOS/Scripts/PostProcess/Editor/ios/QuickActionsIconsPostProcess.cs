@@ -55,7 +55,7 @@ namespace QuickActionsiOS
 				var assetDestination = destinationPath + nameAndExtension;
 				FileUtil.CopyFileOrDirectory(assetLocation, assetDestination);
 
-				var grGUID = xCodeProject.AddFolderReference(destinationPath + nameAndExtension, "");
+				var grGUID = xCodeProject.AddFolderReference(destinationPath + nameAndExtension, nameAndExtension);
 				xCodeProject.AddFileToBuild(targetGUID, grGUID);
 			}
 			xCodeProject.WriteToFile(projectPath);
